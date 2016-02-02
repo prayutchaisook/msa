@@ -22,6 +22,8 @@ class ClientsController extends Controller
 
     public function showPortal()
     {
-        return view('clients.portal');
+       // return view('fixed.clients.portal');
+        return view('layouts.top-nav.app');
+        
     }
 }
