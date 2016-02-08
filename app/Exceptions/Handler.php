@@ -46,6 +46,18 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+          $error_detail=array("Error"=>$e->getMessage(),"File"=>$e->getFile(),"Line"=>$e->getLine());
+
+           if ($request->is('api/*')) {//check ถ้าเป็น ERROR ของ API
+                if ($e instanceof NotFoundHttpException)
+                {
+                  return response(array("Status"=>404,"Message"=>"Api Resouce not found"),404);
+                }
+                
+                return response(array("Status"=>500,"Message"=>"Internal Server Error","Detail"=> $error_detail),500);
+
+         }
+           
         return parent::render($request, $e);
     }
 }

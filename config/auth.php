@@ -13,7 +13,11 @@ return [
     |
     */
 
-    'defaults' => [
+    /*'defaults' => [
+        'guard' => 'web',
+        'passwords' => 'users',
+    ],*/
+     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
     ],
@@ -40,9 +44,8 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
         'api' => [
-            'driver' => 'token',
+            'driver' => 'token', //user str_random(60) insert to api_token at table users
             'provider' => 'users',
         ],
     ],

@@ -28,7 +28,7 @@ class Kernel extends HttpKernel
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \App\Http\Middleware\VerifyCsrfToken::class,
+            //\App\Http\Middleware\VerifyCsrfToken::class,
         ],
         'admin' => [
           'auth',
@@ -36,10 +36,20 @@ class Kernel extends HttpKernel
         ],
         'clients' => [
           'auth',
-          'OnlyClients' 
+          'OnlyClients',
+          'jwt.token'
+        
+          
         ],
         'api' => [
             'throttle:60,1',
+            
+        ],
+        'jwt' => [
+            'throttle:60,1',
+            'api.request',
+            'jwt.auth'
+            
         ],
     ];
 
@@ -53,9 +63,14 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'api.request'=>\App\Http\Middleware\ApiRequest::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'OnlyAdmin'=>\App\Http\Middleware\OnlyAdmin::class,
         'OnlyClients'=>\App\Http\Middleware\OnlyClients::class,
+        'jwt.auth' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
+        'jwt.token' =>\App\Http\Middleware\VerifyApiToken::class,
+       
+       
     ];
 }

@@ -20,10 +20,9 @@ class ClientsController extends Controller
         $this->middleware('clients');
     }
 
-    public function showPortal()
+    public function showMain(Request $request)
     {
-       // return view('fixed.clients.portal');
-        return view('layouts.top-nav.app');
-        
+        //print_r($request->session()->get('jwt_token'));
+         return view('layouts.top-nav.app');
     }
 }

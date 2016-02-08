@@ -17,7 +17,7 @@ class AdminController extends Controller
 
     public function showPortal()
     {
-        return view('admin.portal');
+        return view('layouts.fixed.app');
     }
     public function showProfile()
     {

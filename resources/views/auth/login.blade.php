@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Log in</title>
+   <title>MOBILE APPLICATION SERVICE</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -27,18 +27,18 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../../index2.html"><b>MSA</b>CLOUD</a>
+        <a href="#"><b>MSA</b>CLOUD</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
          <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
          {!! csrf_field() !!}
-          <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-            <input type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}">
+          <div class="form-group has-feedback{{ $errors->has('username') ? ' has-error' : '' }}">
+            <input type="text" placeholder="Username" class="form-control" name="username" value="{{ old('usernamel') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                                 @endif
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

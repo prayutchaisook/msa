@@ -29,7 +29,7 @@ class AuthController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
-
+    protected $username = 'username';
     /**
      * Create a new authentication controller instance.
      *
@@ -51,16 +51,54 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
+            'username' => 'required|email|max:25|unique:username',
             'password' => 'required|confirmed|min:6',
         ]);
     }
+  
     protected function authenticated( $request, $user)
     {
+               //request api token from api serice
+                $url = env('API_URL')."/request_token";   
+                //url-ify the data for the POST
+                $fields_string ="username=".$request->username."&password=".$request->password;
+                //open connection
+                $ch = curl_init();
+                $header[] = 'Content-length: 0 
+                             Content-type: application/json';
+                //set the url, number of POST vars, POST data
+                curl_setopt($ch,CURLOPT_URL, $url);
+                curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                curl_setopt($ch, CURLOPT_HEADER,  0);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                //execute post
+                $result = curl_exec($ch);
+                $return_http_status=curl_getinfo($ch);
+               
+                switch ($return_http_status['http_code'])
+                {
+                  case "200": //HTTP 200 สร้างเก็บ Token เพื่อเรียกใช้งาน api ต่อไป
+                              if(($resul_json=json_decode($result))==FALSE)
+                              {
+                                 echo "JSON IS INVALID";
+                              }
+                             
+                             $request->session()->put('jwt_token',$resul_json->token);
+                             break;    
+                  default :  print_r($return_http_status); die();
+                }
+           
+                //close connection
+                curl_close($ch);  
+      
+                
         if($user->admin) {
           
              return redirect('/admin');
         }
-
+    
+        
         return redirect()->intended('/');
         
     }
@@ -75,6 +113,7 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'username' => $data['username'],
             'password' => bcrypt($data['password']),
         ]);
     }

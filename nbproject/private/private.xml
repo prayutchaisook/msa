@@ -3,24 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/www/msa/resources/views/admin/profile.blade.php</file>
-            <file>file:/D:/www/msa/resources/views/welcome.blade.php</file>
-            <file>file:/D:/www/msa/app/User.php</file>
-            <file>file:/D:/www/msa/resources/views/admin/portal.blade.php</file>
-            <file>file:/D:/www/msa/app/Http/Kernel.php</file>
-            <file>file:/D:/www/msa/app/Http/Middleware/OnlyClients.php</file>
-            <file>file:/D:/www/msa/app/Http/Controllers/Admin/AdminController.php</file>
+            <file>file:/D:/www/msa/resources/views/clients/installation/inc-left-sidebar.blade.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/fixed/inc-scripts.blade.php</file>
             <file>file:/D:/www/msa/app/Http/routes.php</file>
-            <file>file:/D:/www/msa/resources/views/auth/login.blade.php</file>
             <file>file:/D:/www/msa/app/Http/Controllers/Auth/AuthController.php</file>
-            <file>file:/D:/www/msa/app/Http/Middleware/RedirectIfAuthenticated.php</file>
-            <file>file:/D:/www/msa/app/Http/Middleware/Authenticate.php</file>
-            <file>file:/D:/www/msa/index.php</file>
-            <file>file:/D:/www/msa/resources/views/clients/portal.blade.php</file>
-            <file>file:/D:/www/msa/resources/views/layouts/app.blade.php</file>
-            <file>file:/D:/www/msa/app/Http/Middleware/OnlyAdmin.php</file>
-            <file>file:/D:/www/msa/app/Http/Controllers/Clients/ClientsController.php</file>
-            <file>file:/D:/www/msa/config/auth.php</file>
+            <file>file:/D:/www/msa/app/Http/Controllers/Clients/InstallationController.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/top-nav/app.blade.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/fixed/inc-header.blade.php</file>
+            <file>file:/D:/www/msa/app/Model/Components/Project.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/top-nav/inc-left-sidebar.blade.php</file>
+            <file>file:/D:/www/msa/resources/views/clients/installation/main.blade.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/fixed/app.blade.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/top-nav/inc-header.blade.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/top-nav/inc-stylesheet.blade_1.php</file>
+            <file>file:/D:/www/msa/resources/views/layouts/fixed/inc-stylesheet.blade.php</file>
         </group>
     </open-files>
 </project-private>

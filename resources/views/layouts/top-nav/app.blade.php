@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Top Navigation</title>
+    <title>MOBILE APPLICATION SERVICE</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -14,6 +14,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
+     <link rel="stylesheet" href="{{asset("assets/dist/css/fonts/sarabun/thsarabunnew.css")}} "> 
     <link rel="stylesheet" href="{{asset("assets/dist/css/AdminLTE.min.css")}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
@@ -21,11 +22,13 @@
 
     
     <style>
+         body { font-family: 'THSarabunNew', 'Source Sans Pro','Helvetica Neue','Helvetica','Arial','sans-serif'; }
         .skin-black-light .main-header .navbar-brand {
     border-right: none;
     color: #333;
     
 }
+
 .skin-black-light .main-header > .navbar .navbar-nav > li > a {
     border-right:none;
     
@@ -46,15 +49,57 @@
 .skin-black-light .main-header > .sub-nav  {
    background-color: #3c8dbc;
    min-height: 40px;
+   height: 40px;
 } 
 .navbar-nav > li.user-menu > a,.navbar-nav > li.home > a {
     padding-bottom:10px;
     padding-top: 10px;
   
 }
+.skin-black-light .main-header > .navbar .nav > li > a:hover, .skin-black-light .main-header > .navbar .nav > li > a:active, .skin-black-light .main-header > .navbar .nav > li > a:focus, .skin-black-light .main-header > .navbar .nav .open > a, .skin-black-light .main-header > .navbar .nav .open > a:hover, .skin-black-light .main-header > .navbar .nav .open > a:focus, .skin-black-light .main-header > .navbar .nav > .active > a {
+     background: rgba(0,0,0,0.1);
+    color: #f6f6f6;
+}
+
 .container {
-   width: 980px !important; 
+   width: 1000px !important; 
  
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:"THSarabunNew","Source Sans Pro","Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+.component{
+    padding: 5px;
+}
+.small-box {
+
+    margin-bottom: 5px;
+
+}
+.small-box > .inner {
+    padding-bottom: 0px;
+}
+.small-box p {
+    
+    padding: 50px 0 0px 0;
+    text-align: center;
+}
+.small-box .icon {
+    font-size: 90px;
+    right: 50px;
+    top: 20px;
+   
+}
+.small-box > .small-box-footer {
+   font-size: 12px;
+   padding-bottom: 15px;
+   padding-top: 15px;
+}
+.small-box > .support-tool{
+    padding-top: 10px;
+     padding-bottom: 10px;
+     text-align: left;
+     padding-left: 10px;
 }
     </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -69,10 +114,10 @@
     <div class="wrapper">
 
       <header class="main-header">
-          <nav class="navbar navbar-static-top">
+          <nav class="navbar navbar-static-top" style=" background-color: #fff;">
               <div class="container" >
             <div class="navbar-header">
-              <a href="../../index2.html" class="navbar-brand"><b>MSA</b>CLOUD</a>
+                <a href="../../index2.html" class="navbar-brand" style="    color: #333;"><b>MSA</b>CLOUD</a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                 <i class="fa fa-bars"></i>
               </button>
@@ -89,16 +134,13 @@
           
           </div><!-- /.container-fluid -->
         </nav>
-        <nav class="navbar navbar-static-top sub-nav">
+          <nav class="navbar navbar-static-top sub-nav" style="height:40px;min-height: 40px;">
           <div class="container" style="  padding-left: 0;padding-right: 0;" >
            
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class="home"><a href="#"><i class="fa fa-home"></i> กลับหน้าหลัก </a></li>
-               
-              </ul>
+              
               
             </div><!-- /.navbar-collapse -->
             <!-- Navbar Right Menu -->
@@ -106,46 +148,7 @@
                 <ul class="nav navbar-nav">
                   <!-- Messages: style can be found in dropdown.less-->
                   <!-- User Account Menu -->
-                  <li class="dropdown user user-menu">
-                    <!-- Menu Toggle Button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <!-- The user image in the navbar-->
-                      <img src="{{asset("assets/dist/img/user2-160x160.jpg")}}" class="user-image" alt="User Image">
-                      <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                      <span class="hidden-xs">Alexander Pierce</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <!-- The user image in the menu -->
-                      <li class="user-header">
-                        <img src="{{asset("assets/dist/img/user2-160x160.jpg")}}" class="img-circle" alt="User Image">
-                        <p>
-                          Alexander Pierce - Web Developer
-                          <small>Member since Nov. 2012</small>
-                        </p>
-                      </li>
-                      <!-- Menu Body -->
-                      <li class="user-body">
-                        <div class="col-xs-4 text-center">
-                          <a href="#">Followers</a>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                          <a href="#">Sales</a>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                          <a href="#">Friends</a>
-                        </div>
-                      </li>
-                      <!-- Menu Footer-->
-                      <li class="user-footer">
-                        <div class="pull-left">
-                          <a href="#" class="btn btn-default btn-flat">Profile</a>
-                        </div>
-                        <div class="pull-right">
-                          <a href="{{ url('/logout') }}" class="btn btn-default btn-flat">Sign out</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
+                @include('layouts.fixed.inc-user-menu')
                 </ul>
               </div><!-- /.navbar-custom-menu -->
           </div><!-- /.container-fluid -->
@@ -159,76 +162,76 @@
 
           <div class="content-wrapper" style="border-left:0;">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
+        <section class="content-header"  style="padding-bottom:10px;">
           <h1>
-            Widgets
-            <small>Preview page</small>
+           Portal Page
+            <small></small>
           </h1>
         
         </section>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="col-xs-9">
 
           <!-- Small boxes (Stat box) -->
           <div class="row">
-            <div class="col-xs-3">
+            <div class="col-xs-3 component">
               <!-- small box -->
-              <div class="small-box bg-aqua">
+              <div class="small-box  bg-blue-gradient">
                 <div class="inner">
-                  <h3>150</h3>
-                  <p>INSTALLATION</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
                 <div class="icon">
-                  <i class="fa fa-shopping-cart"></i>
+                  <i class="fa fa-cog"></i>
                 </div>
-                <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                <a href="{{URL::to("/clients/installation")}}" class="small-box-footer">
+                 INSTALLATION 
                 </a>
               </div>
             </div><!-- ./col -->
-            <div class="col-xs-3">
+            <div class="col-xs-3 component">
               <!-- small box -->
-              <div class="small-box bg-green">
+              <div class="small-box bg-blue-gradient">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-                  <p>Bounce Rate</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
+                  <i class="fa fa-wrench"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                 MAINTENANCE
                 </a>
               </div>
             </div><!-- ./col -->
-            <div class="col-xs-3">
+            <div class="col-xs-3 component">
               <!-- small box -->
-              <div class="small-box bg-yellow">
+              <div class="small-box bg-blue-gradient">
                 <div class="inner">
-                  <h3>44</h3>
-                  <p>User Registrations</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-person-add"></i>
+                  <i class="fa fa-pencil-square-o"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                  ADHOC
                 </a>
               </div>
             </div><!-- ./col -->
-            <div class="col-xs-3">
+            <div class="col-xs-3 component">
               <!-- small box -->
-              <div class="small-box bg-red">
+              <div class="small-box bg-yellow-gradient">
                 <div class="inner">
-                  <h3>65</h3>
-                  <p>Unique Visitors</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
+                  <i class="fa fa-database"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                PROFILE DATABASE
                 </a>
               </div>
             </div><!-- ./col -->
@@ -237,63 +240,49 @@
           <!-- =========================================================== -->
  <!-- Small boxes (Stat box) -->
           <div class="row">
-            <div class="col-xs-3">
+            <div class="col-xs-3 component">
               <!-- small box -->
-              <div class="small-box bg-aqua">
+              <div class="small-box  bg-green-gradient">
                 <div class="inner">
-                  <h3>150</h3>
-                  <p>INSTALLATION</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
                 <div class="icon">
-                  <i class="fa fa-shopping-cart"></i>
+                  <i class="fa fa-dashboard"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                  DASHBOARD
                 </a>
               </div>
             </div><!-- ./col -->
-            <div class="col-xs-3">
+            <div class="col-xs-3 component">
               <!-- small box -->
-              <div class="small-box bg-green">
+              <div class="small-box bg-green-gradient">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-                  <p>Bounce Rate</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
+                  <i class="fa fa-bar-chart"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                 REPORT
                 </a>
               </div>
             </div><!-- ./col -->
-            <div class="col-xs-3">
+          
+            <div class="col-xs-6 component">
               <!-- small box -->
               <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>44</h3>
-                  <p>User Registrations</p>
+                  <h3>&nbsp;</h3>
+                  <p>&nbsp;</p>
                 </div>
-                <div class="icon">
+                  <div class="icon" style="right: 200px; left: 140px;">
                   <i class="ion ion-person-add"></i>
                 </div>
                 <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
-                </a>
-              </div>
-            </div><!-- ./col -->
-            <div class="col-xs-3">
-              <!-- small box -->
-              <div class="small-box bg-red">
-                <div class="inner">
-                  <h3>65</h3>
-                  <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">
-                  More info <i class="fa fa-arrow-circle-right"></i>
+                 USER & FORM SETTING
                 </a>
               </div>
             </div><!-- ./col -->
@@ -302,15 +291,78 @@
           <!-- =========================================================== -->
 
         </section><!-- /.content -->
+        
+        <section class="col-xs-3 component">
+
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- small box -->
+              <div class="small-box bg-light-blue">
+                  <p  style="padding:20px 0 17px 10px;margin-bottom: 0px; text-align: left;">
+                   <i class="fa fa-plug"></i> SUPPORT TOOLS
+                </p>
+              </div>
+              <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 1
+                </a>   
+              </div>
+               <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 2
+                </a>   
+              </div>
+               <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 3
+                </a>   
+              </div>
+               <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 4
+                </a>   
+              </div>
+               <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 5
+                </a>   
+              </div>
+               <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 6
+                </a>   
+              </div>
+               <div class="small-box bg-aqua">
+                <a href="#" class="small-box-footer support-tool">
+                  TOOLS 7
+                </a>   
+              </div>
+                <div class="small-box bg-red">
+                <a href="{{URL::to("/logout")}}" class="small-box-footer support-tool">
+                <i class="fa fa-power-off"></i>  SIGN OUT
+                </a>   
+              </div>
+              
+              
+            </div><!-- ./col -->
+        
+          
+            
+          </div><!-- /.row -->
+
+
+
+        </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
         </div><!-- /.container -->
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
         <div class="container">
           <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.0
+            <b>Version</b> BETA 0.1
           </div>
-          <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">MSACLOUD</a>.</strong> All rights reserved.
+          <strong>Copyright &copy; 2014-2015 <a href="#">MSACLOUD</a>.</strong> All rights reserved.
         </div><!-- /.container -->
       </footer>
     </div><!-- ./wrapper -->
@@ -326,7 +378,6 @@
     
     <!-- AdminLTE App -->
     <script src="{{asset("assets/dist/js/app.min.js")}}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{asset("assets/dist/js/demo.js")}}"></script>
+
   </body>
 </html>

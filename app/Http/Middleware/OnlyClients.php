@@ -15,6 +15,7 @@ class OnlyClients
      */
     public function handle($request, Closure $next)
     {
+       
          if(Auth::user()->admin)
         {
             return redirect('/admin');
